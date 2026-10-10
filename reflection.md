@@ -3,19 +3,19 @@
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
 
 ## 1. What was broken when you started?
-
+the atemps on the bar and the actual website was in consistant, the hint were wrong and had to be swaped around in code, and 
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
-
+the hints were backwards and attemps were inconsistant
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
+|attempts | attempts should be 8| attempts should be 7|attempts code had to be lowered to 0 instead of 1 |
+|GO HIGHER Or GO LOWER |when is less go higher when its high go lower |when its less go lower and when its high go higher |The code for GO HIGHER Or GO LOWER was swapped |
 | | | | |
 
 ---

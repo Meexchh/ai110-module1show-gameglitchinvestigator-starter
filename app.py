@@ -35,9 +35,9 @@ def check_guess(guess, secret):
 
     try:
         if guess > secret:
-            return "Too High", "📈 Go HIGHER!"
+            return "Too High", "📈 Go LOWER!"
         else:
-            return "Too Low", "📉 Go LOWER!"
+            return "Too Low", "📉 Go HIGHER!"
     except TypeError:
         g = str(guess)
         if g == secret:
@@ -93,7 +93,7 @@ if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
 if "attempts" not in st.session_state:
-    st.session_state.attempts = 1
+    st.session_state.attempts = 0
 
 if "score" not in st.session_state:
     st.session_state.score = 0
@@ -131,11 +131,7 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
-if new_game:
-    st.session_state.attempts = 0
-    st.session_state.secret = random.randint(1, 100)
-    st.success("New game started.")
-    st.rerun()
+st.session_state.status="playing"
 
 if st.session_state.status != "playing":
     if st.session_state.status == "won":
